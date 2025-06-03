@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо Кушнірука Максима</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#hero" class="logo">ARION</a>
+        <nav class="nav">
+            <a href="#hero" data-i18n="nav-home">Головна</a>
+            <a href="#about" data-i18n="nav-about">Про мене</a>
+            <a href="#projects" data-i18n="nav-projects">Проєкти</a>
+            <a href="#contacts" data-i18n="nav-contacts">Контакти</a>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" aria-label="Перемкнути тему">🌙</button>
+            <button id="lang-toggle" aria-label="Змінити мову">EN</button>
+        </div>
+        <button class="menu-toggle" aria-label="Меню">&#9776;</button>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero-title">Ласкаво просимо на сайт Кушнірука Максима!</h1>
+            <p data-i18n="hero-subtitle">Я створюю креативні вебрішення</p>
+            <a href="#about" class="btn" data-i18n="hero-btn">Дізнатися більше</a>
+        </div>
+        <div class="hero-image">
+            <img src="img/hero.jpg" alt="Anonymus Image">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 data-i18n="about-title">Про мене</h2>
+        <div class="about-content">
+            <img src="img/avatar.jpg" alt="Аватар" class="avatar">
+            <div>
+                <p data-i18n="about-short">
+                    Я — Кушнірук Максим, веброзробник з малим досвідом у HTML, CSS, JavaScript. Створюю сучасні та адаптивні сайти.
+
+                    Працюю з Git, Node.js, маю досвід командної роботи та розробки SPA.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 data-i18n="projects-title">Мої проєкти</h2>
+        <div class="projects-gallery">
+            <div class="project-card" data-project="1">
+                <img src="img/project1.jpg" alt="Проєкт 1">
+                <h3 data-i18n="project1-title">Проєкт 1</h3>
+                <p data-i18n="project1-desc">Телеграмм-бот!</p>
+            </div>
+            <div class="project-card" data-project="2">
+                <img src="img/project2.jpg" alt="Проєкт 2">
+                <h3 data-i18n="project2-title">Проєкт 2</h3>
+                <p data-i18n="project2-desc">Тут міг бути мій 2-гий чудовий проект!</p>
+            </div>
+            <div class="project-card" data-project="3">
+                <img src="img/project2.jpg" alt="Проєкт 3">
+                <h3 data-i18n="project3-title">Проєкт 3</h3>
+                <p data-i18n="project3-desc">Тут міг бути мій 3-ій чудовий проект!</p>
+            </div>
+        </div>
+        <div id="project-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3 id="modal-title"></h3>
+                <img id="modal-img" src="" alt="" style="max-width:100%;border-radius:12px;margin:16px 0;">
+                <p id="modal-desc"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <h2 data-i18n="contacts-title">Контакти</h2>
+        <form id="contact-form">
+            <label for="email" data-i18n="form-email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message" data-i18n="form-message">Повідомлення:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" data-i18n="form-send">Надіслати</button>
+            <div id="form-success" class="hidden" data-i18n="form-success">Дякуємо! Ваше повідомлення надіслано.</div>
+        </form>
+        <div class="contact-info">
+            <p>Email: pressftonewakk@gmail.com</p>
+            <p>GitHub: <a href="https://github.com/not4aim" target="_blank">MaksKuschniruk</a></p>
+            <p>Telegram: <a href="@maks_arion" target="_blank">MAXIMILIANO</a></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="#hero" class="to-top" aria-label="Догори" data-i18n="to-top">Догори ↑</a>
+        <div class="socials">
+            <a href="https://github.com/DenysShulga" target="_blank">GitHub</a>
+        </div>
+        <p data-i18n="footer-copyright">© 2025 Вебстудія Кушнірука Максима</p>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/lang.js"></script>
+</body>
+</html>
